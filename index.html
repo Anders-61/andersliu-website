@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <meta http-equiv="Cache-Control" content="max-age=86400" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon 建议：可添加 32x32 或 180x180 的 favicon.ico / apple-touch-icon.png -->
@@ -518,6 +519,11 @@
   </style>
   <link rel="preconnect" href="https://xhslink.com" crossorigin />
   <link rel="dns-prefetch" href="https://xhslink.com" />
+  <link rel="preload" as="image" href="images/portrait.jpg" />
+  <link rel="preload" as="image" href="images/heu.jpg" />
+  <link rel="preload" as="image" href="images/midea.jpg" />
+  <link rel="preload" as="image" href="images/kuka.jpg" />
+  <link rel="preload" as="image" href="images/swisslog.jpg" />
 </head>
 
 <body>
@@ -574,7 +580,7 @@
             <div class="portrait-frame">
               <img src="images/portrait.jpg" fetchpriority="high" alt="Portrait"
                    onload="document.getElementById('portraitFallback').style.display='none';"
-                   onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='flex';" / loading="eager">
+                   onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='flex';" / loading="eager" decoding="async">
               <div id="portraitFallback" class="portrait-fallback">
                 <div><strong>刘译桥<br />Anders Liu</strong><span>Manufacturing / Quality / Logistics Automation</span></div>
               </div>
@@ -604,7 +610,7 @@
             <article class="experience-card" onclick="openDetail('heu')">
               <div class="card-arrow">&#8594;</div>
               <div class="time">2020 — 2024</div>
-              <div class="experience-media"><img src="images/heu.jpg" alt="HEU" onerror="this.style.display='none';" / loading="eager"></div>
+              <div class="experience-media"><img src="images/heu.jpg" alt="HEU" onerror="this.style.display='none';" / loading="eager" decoding="async"></div>
               <div class="role">
                 <h3>Harbin Engineering University / 哈尔滨工程大学</h3>
                 <div class="meta"><span data-lang="zh">能源与动力专业本科</span><span data-lang="en">B.Eng. in Energy and Power Engineering</span></div>
@@ -614,7 +620,7 @@
             <article class="experience-card" onclick="openDetail('midea')">
               <div class="card-arrow">&#8594;</div>
               <div class="time">2024.07 — 2025.06</div>
-              <div class="experience-media"><img src="images/midea.jpg" alt="Midea" onerror="this.style.display='none';" / loading="eager"></div>
+              <div class="experience-media"><img src="images/midea.jpg" alt="Midea" onerror="this.style.display='none';" / loading="eager" decoding="async"></div>
               <div class="role">
                 <h3>Midea Group / 美的集团</h3>
                 <div class="meta"><span data-lang="zh">电商物流销售</span><span data-lang="en">E-commerce Logistics Sales</span></div>
@@ -624,7 +630,7 @@
             <article class="experience-card" onclick="openDetail('kuka')">
               <div class="card-arrow">&#8594;</div>
               <div class="time">2025.07 — 2026.05</div>
-              <div class="experience-media"><img src="images/kuka.jpg" alt="KUKA" onerror="this.style.display='none';" / loading="eager"></div>
+              <div class="experience-media"><img src="images/kuka.jpg" alt="KUKA" onerror="this.style.display='none';" / loading="eager" decoding="async"></div>
               <div class="role">
                 <h3>KUKA / 库卡机器人</h3>
                 <div class="meta"><span data-lang="zh">线缆车间工厂质量</span><span data-lang="en">Factory Quality, Cable Workshop</span></div>
@@ -634,7 +640,7 @@
             <article class="experience-card" onclick="openDetail('swisslog')">
               <div class="card-arrow">&#8594;</div>
               <div class="time">2026.05 — Present</div>
-              <div class="experience-media"><img src="images/swisslog.jpg" alt="Swisslog" onerror="this.style.display='none';" / loading="eager"></div>
+              <div class="experience-media"><img src="images/swisslog.jpg" alt="Swisslog" onerror="this.style.display='none';" / loading="eager" decoding="async"></div>
               <div class="role">
                 <h3>Swisslog / 瑞仕格</h3>
                 <div class="meta"><span data-lang="zh">物流自动化售前技术方案规划</span><span data-lang="en">Pre-sales Solution Planning, Logistics Automation</span></div>
@@ -743,7 +749,7 @@
             <div class="contact-qr-grid">
               <div class="contact-qr-card">
                 <img class="qr" src="images/xiaohongshu-qr.png" alt="Xiaohongshu QR"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" / loading="lazy">
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" / loading="lazy" decoding="async">
                 <div class="qr-fallback" style="display:none;width:120px;height:120px;flex-shrink:0;"></div>
                 <div class="contact-qr-info">
                   <h4><span data-lang="zh">小红书</span><span data-lang="en">RED</span></h4>
@@ -753,7 +759,7 @@
               </div>
               <div class="contact-qr-card">
                 <img class="qr" src="images/wechat-qr.png" alt="WeChat QR"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" / loading="lazy">
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" / loading="lazy" decoding="async">
                 <div class="qr-fallback" style="display:none;width:120px;height:120px;flex-shrink:0;"></div>
                 <div class="contact-qr-info">
                   <h4><span data-lang="zh">微信</span><span data-lang="en">WeChat</span></h4>
@@ -799,7 +805,7 @@
       </div>
       <div class="detail-hero-media">
         <img src="images/heu-detail-hero.jpg" alt="HEU"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy">
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy" decoding="async">
         <div class="media-fallback" style="display:none;">Harbin Engineering University</div>
       </div>
       <div class="detail-body">
@@ -814,7 +820,7 @@
               <span data-lang="en">Elected as class monitor upon enrollment, responsible for liaison between the college and class students, handling daily information statistics, form compilation, and tasks assigned by counselors. Observed the impact of goal orientation on behavioral differences during event organization: students actively participated in high-reward activities (credit/GPA-related), while low-visibility, low-reward activities required rotation or mandatory forms to advance, thus understanding group management logic driven by different motivations.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/heu-detail-1.jpg" alt="Student Work" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/heu-detail-1.jpg" alt="Student Work" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -827,7 +833,7 @@
               <span data-lang="en">Served as a student reporter for the university Party Committee and Youth League Committee, responsible for planning, shooting, and post-production of graphic content for the official WeChat public account and Weibo. Personal photography works were adopted by the school's official media multiple times. Responsible for live streaming coordination and filming of the university street dance club special event, learned photography from scratch and completed the full process execution.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/heu-detail-2.jpg" alt="Media Practice" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/heu-detail-2.jpg" alt="Media Practice" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -840,7 +846,7 @@
               <span data-lang="en">Received second-class and third-class university scholarships, as well as various science and technology innovation competition awards. Completed the transformation from exam-oriented education to comprehensive capability expansion, establishing preliminary understanding in organization coordination, media communication, and interpersonal communication. Systematically studied core courses including engineering thermodynamics, fluid mechanics, heat transfer, and combustion theory, cultivating rigorous systems thinking and problem analysis capabilities.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/heu-detail-3.jpg" alt="Academic Growth" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/heu-detail-3.jpg" alt="Academic Growth" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <!-- Gallery -->
         <div class="gallery-section">
@@ -849,11 +855,11 @@
           </div>
           <div class="gallery-wrapper">
             <div class="gallery-track" id="galleryTrack">
-              <img src="images/gallery-1.jpg" alt="Gallery 1" onerror="this.style.display='none'" / loading="lazy">
-              <img src="images/gallery-2.jpg" alt="Gallery 2" onerror="this.style.display='none'" / loading="lazy">
-              <img src="images/gallery-3.jpg" alt="Gallery 3" onerror="this.style.display='none'" / loading="lazy">
-              <img src="images/gallery-4.jpg" alt="Gallery 4" onerror="this.style.display='none'" / loading="lazy">
-              <img src="images/gallery-5.jpg" alt="Gallery 5" onerror="this.style.display='none'" / loading="lazy">
+              <img src="images/gallery-1.jpg" alt="Gallery 1" onerror="this.style.display='none'" / loading="lazy" decoding="async">
+              <img src="images/gallery-2.jpg" alt="Gallery 2" onerror="this.style.display='none'" / loading="lazy" decoding="async">
+              <img src="images/gallery-3.jpg" alt="Gallery 3" onerror="this.style.display='none'" / loading="lazy" decoding="async">
+              <img src="images/gallery-4.jpg" alt="Gallery 4" onerror="this.style.display='none'" / loading="lazy" decoding="async">
+              <img src="images/gallery-5.jpg" alt="Gallery 5" onerror="this.style.display='none'" / loading="lazy" decoding="async">
             </div>
             <button class="gallery-arrow prev" onclick="prevSlide()">&#8249;</button>
             <button class="gallery-arrow next" onclick="nextSlide()">&#8250;</button>
@@ -887,7 +893,7 @@
       </div>
       <div class="detail-hero-media">
         <img src="images/midea-detail-hero.jpg" alt="Midea"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy">
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy" decoding="async">
         <div class="media-fallback" style="display:none;">Midea Group</div>
       </div>
       <div class="detail-body">
@@ -902,7 +908,7 @@
               <span data-lang="en">Deeply involved in the full-process practical operation of receiving, shelving, picking, verification, packing, and shipping in the frontline warehouse, understanding the logistics "input-output" closed loop. Proactively undertook inventory support tasks, personally experiencing labor-intensive processes: manual cross-checking at dawn, handwritten records, and multiple rounds of comparison. This led to the early realization of the automation potential of this process and the application value of robots and AI in logistics scenarios.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/midea-detail-1.jpg" alt="Warehouse" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/midea-detail-1.jpg" alt="Warehouse" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -915,7 +921,7 @@
               <span data-lang="en">Responsible for liaising with JD platform for capacity procurement, understanding the business logic that even with its own logistics system, third-party supplementation for branch and trunk line capacity is still needed. Participated in offline bidding conferences, intuitively experiencing price competition mechanisms, and initially engaging with B2B procurement decision-making processes. Daily tracking of actual e-commerce shipping and receiving volumes, calculating theoretical revenue according to contracts.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/midea-detail-2.jpg" alt="JD Team" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/midea-detail-2.jpg" alt="JD Team" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -928,7 +934,7 @@
               <span data-lang="en">Responsible for maintaining existing customers and signing new customers, driving business growth. Focused on controlling "overdue" indicators (theoretical revenue not received is not real cash flow), simultaneously managing the number of effective business opportunities, follow-up status, and customer visit situations, forming a systematic understanding of the full B2B sales process. Ranked among the top trainees and completed RMB 1.6M in basic renewal contracts.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/midea-detail-3.jpg" alt="Sales Management" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/midea-detail-3.jpg" alt="Sales Management" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
       </div>
     </div>
@@ -957,7 +963,7 @@
       </div>
       <div class="detail-hero-media">
         <img src="images/kuka-detail-hero.jpg" alt="KUKA"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy">
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy" decoding="async">
         <div class="media-fallback" style="display:none;">KUKA Robotics</div>
       </div>
       <div class="detail-body">
@@ -972,7 +978,7 @@
               <span data-lang="en">Responsible for developing inspector operation standards and handling processes for three types of abnormalities: incoming materials, process, and quality inspection. Established standardized quality inspection operation manuals to ensure consistency in judgment across different shifts and inspectors, reducing quality fluctuations caused by human factors.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/kuka-detail-1.jpg" alt="Quality Control" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/kuka-detail-1.jpg" alt="Quality Control" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -985,7 +991,7 @@
               <span data-lang="en">Quickly completed root cause qualification of customer complaint issues: distinguishing between incoming material defects, operational deviations, process loopholes, missing inspection standards, or R&amp;D design problems. Key insight: do not blindly trust inspector instrument data, insist on going to the frontline to personally verify testing methods and operation processes, "seeing is believing" to avoid information distortion, and precisely locate the real problem points.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/kuka-detail-2.jpg" alt="Root Cause Analysis" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/kuka-detail-2.jpg" alt="Root Cause Analysis" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -998,7 +1004,7 @@
               <span data-lang="en">When encountering batch quality issues, established clear material status tracking logic: in-production order quantity &#8594; completed semi-finished quantity &#8594; installed quantity &#8594; factory retention/customer site distribution, investigated layer by layer. The goal is to achieve factory interception at the lowest error cost, avoiding issues flowing to customer sites, and initiating scrap or rework decisions when severe.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/kuka-detail-3.jpg" alt="Cost Control" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/kuka-detail-3.jpg" alt="Cost Control" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
       </div>
     </div>
@@ -1021,7 +1027,7 @@
       </div>
       <div class="detail-hero-media">
         <img src="images/swisslog-detail-hero.jpg" alt="Swisslog"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy">
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" / loading="lazy" decoding="async">
         <div class="media-fallback" style="display:none;">Swisslog Logistics Automation</div>
       </div>
       <div class="detail-body">
@@ -1036,7 +1042,7 @@
               <span data-lang="en">Responsible for pharmaceutical industry AS/RS projects, based on customer-provided warehouse inbound/outbound flow data, completed equipment quantity calculation and model selection (stacker cranes/four-way shuttles/mother-child shuttles, etc.). Combined with customer building CAD drawings (warehouse length/width/height, fire facilities, column grid layout), designed automated warehouse layout plans, and output multiple technical solutions for customer bidding communication.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/swisslog-detail-1.jpg" alt="Solution Design" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/swisslog-detail-1.jpg" alt="Solution Design" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -1049,7 +1055,7 @@
               <span data-lang="en">In addition to hardware layout, deeply understood logistics software function implementation: receiving, shipping, sorting, inventory, and various data statistics, ensuring the solution can fully cover customer business needs. Coordinated mechanical, electrical, and software multi-disciplinary teams to promote the complete closed loop from conceptual design to technical implementation.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/swisslog-detail-2.jpg" alt="Integration" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/swisslog-detail-2.jpg" alt="Integration" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
         <div class="detail-block">
           <div>
@@ -1062,7 +1068,7 @@
               <span data-lang="en">Organized customer visits to real factories and coordinated technical exchanges; simultaneously studied competitor solution differences, establishing understanding of the depth and competitive landscape of the pharmaceutical logistics automation industry. Through comparative analysis of different manufacturers' technical routes, delivery capabilities, and service networks, provided customers with more competitive solution recommendations.</span>
             </p>
           </div>
-          <div class="detail-visual"><img src="images/swisslog-detail-3.jpg" alt="Competitive Analysis" onerror="this.style.display='none'" / loading="lazy"></div>
+          <div class="detail-visual"><img src="images/swisslog-detail-3.jpg" alt="Competitive Analysis" onerror="this.style.display='none'" / loading="lazy" decoding="async"></div>
         </div>
       </div>
     </div>
